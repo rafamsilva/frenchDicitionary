@@ -1,7 +1,6 @@
 package com.example.franch
 
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -23,13 +22,13 @@ class NumbersActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_numbers)
-        renderNumbers()
+        setContentView(R.layout.word_list)
+        renderView()
     }
 
-    private fun renderNumbers() {
+    private fun renderView() {
         val adapter = WordAdapter(this, words)
-        val listView: ListView = findViewById(R.id.numberView)
+        val listView: ListView = findViewById(R.id.word_list_view)
         listView.setAdapter(adapter)
     }
 
