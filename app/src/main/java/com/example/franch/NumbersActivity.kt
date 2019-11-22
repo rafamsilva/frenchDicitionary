@@ -8,8 +8,18 @@ import androidx.appcompat.app.AppCompatActivity
 
 class NumbersActivity : AppCompatActivity() {
 
-    private val portugueseNumbers = arrayListOf("Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez")
-    private val frenchNumbers = arrayListOf("Un", "Deux", "Trois", "Quatre", "Cinq", "Six", "Sept", "Huit", "Neuf", "Dix")
+    private val words = arrayListOf(
+        Word("Um", "Un"),
+        Word("Dois", "Deux"),
+        Word("Três", "Trois"),
+        Word("Quatro", "Quatre"),
+        Word("Cinco", "Cinq"),
+        Word("Seis", "Six"),
+        Word("Sete", "Sept"),
+        Word("Oito", "Huit"),
+        Word("Nove", "Neuf"),
+        Word("Dez", "Dix")
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,8 +28,9 @@ class NumbersActivity : AppCompatActivity() {
     }
 
     private fun renderNumbers() {
+        val adapter = WordAdapter(this, words)
         val listView: ListView = findViewById(R.id.numberView)
-        listView.setAdapter(ArrayAdapter<String>(this, R.layout.list_item, portugueseNumbers))
+        listView.setAdapter(adapter)
     }
 
 }

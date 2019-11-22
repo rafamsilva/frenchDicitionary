@@ -15,7 +15,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/category_item_padding_horizontal"
-        android:paddingLeft="@dimen/category_item_padding_horizontal"
+        android:padding="@dimen/category_item_padding_horizontal"
         android:id="@+id/default_text_view" />
 </LinearLayout>
