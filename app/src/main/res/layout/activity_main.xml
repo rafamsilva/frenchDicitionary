@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
     android:background="@color/colorYellow">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="@string/numbers"
+            style="@style/categoryItem"
+            android:background="@color/colorOrange"
+            android:id="@+id/numberTextView" />
+        <TextView
+            android:text="@string/members_family"
+            style="@style/categoryItem"
+            android:background="@color/colorGreen"
+            android:id="@+id/membersFamilyTextView" />
+        <TextView
+            android:text="@string/colors"
+            style="@style/categoryItem"
+            android:background="@color/colorPurple"
+            android:id="@+id/colorsTextView"/>
+        <TextView
+            android:text="@string/phrases"
+            style="@style/categoryItem"
+            android:background="@color/colorBlue"
+            android:id="@+id/phrasesTextView"/>
 
-    <TextView
-        android:text="@string/numbers"
-        style="@style/categoryItem"
-        android:background="@color/colorOrange"
-        android:id="@+id/numberTextView" />
-    <TextView
-        android:text="@string/members_family"
-        style="@style/categoryItem"
-        android:background="@color/colorGreen"
-        android:id="@+id/membersFamilyTextView" />
-    <TextView
-        android:text="@string/colors"
-        style="@style/categoryItem"
-        android:background="@color/colorPurple"
-        android:id="@+id/colorsTextView"/>
-    <TextView
-        android:text="@string/phrases"
-        style="@style/categoryItem"
-        android:background="@color/colorBlue"
-        android:id="@+id/phrasesTextView"/>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
