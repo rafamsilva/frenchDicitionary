@@ -7,14 +7,14 @@ import android.widget.ListView
 class ColorsActivity : AppCompatActivity() {
 
     private val words = arrayListOf(
-        Word("Vermelho", "Rouge"),
-        Word("Verde", "Vert"),
-        Word("Marrom", "Brown"),
-        Word("Cinza", "Gris"),
-        Word("Preto", "Noir"),
-        Word("Branco", "Blanc"),
-        Word("Rosa", "Rose"),
-        Word("Laranja", "Orange")
+        Word("Vermelho", "Rouge", R.drawable.color_red),
+        Word("Verde", "Vert", R.drawable.color_green),
+        Word("Marrom", "Brown", R.drawable.color_brown),
+        Word("Cinza", "Gris", R.drawable.color_gray),
+        Word("Preto", "Noir", R.drawable.color_black),
+        Word("Branco", "Blanc", R.drawable.color_white),
+        Word("Rosa", "Rose", R.drawable.color_pink),
+        Word("Amarelo", "Jaune", R.drawable.color_mustard_yellow)
     )
 
 
@@ -25,8 +25,8 @@ class ColorsActivity : AppCompatActivity() {
     }
 
     private fun renderView() {
-        val adapter = WordAdapter(this, words)
+        val adapter = WordAdapter(this, words, R.color.colorPurple)
         val listView: ListView = findViewById(R.id.word_list_view)
-        listView.setAdapter(adapter)
+        listView.adapter = adapter
     }
 }

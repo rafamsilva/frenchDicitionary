@@ -7,16 +7,16 @@ import android.widget.ListView
 class MembersFamilyActivity : AppCompatActivity() {
 
     private val words = arrayListOf(
-        Word("Pai", "Père"),
-        Word("Mãe", "Mère"),
-        Word("Filho", "Fils"),
-        Word("Filha", "Fille"),
-        Word("Irmão mais velho", "Grand frère"),
-        Word("Irmão mais novo", "Petit frère"),
-        Word("Irmã mais velha", "Grande soeur"),
-        Word("Irmã mais nova", "Petite soeur"),
-        Word("Avó", "Grand-père"),
-        Word("Avô", "Grand-mère")
+        Word("Pai", "Père", R.drawable.father),
+        Word("Mãe", "Mère", R.drawable.mother),
+        Word("Filho", "Fils", R.drawable.son),
+        Word("Filha", "Fille", R.drawable.daughter),
+        Word("Irmão mais velho", "Grand frère", R.drawable.older_brother),
+        Word("Irmão mais novo", "Petit frère", R.drawable.newer_brother),
+        Word("Irmã mais velha", "Grande soeur", R.drawable.older_sister),
+        Word("Irmã mais nova", "Petite soeur", R.drawable.newer_sister),
+        Word("Avó", "Grand-père", R.drawable.grandmother),
+        Word("Avô", "Grand-mère", R.drawable.grandfather)
     )
 
 
@@ -27,8 +27,8 @@ class MembersFamilyActivity : AppCompatActivity() {
     }
 
     private fun renderView() {
-        val adapter = WordAdapter(this, words)
+        val adapter = WordAdapter(this, words, R.color.colorGreen)
         val listView: ListView = findViewById(R.id.word_list_view)
-        listView.setAdapter(adapter)
+        listView.adapter = adapter
     }
 }

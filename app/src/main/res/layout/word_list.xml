@@ -4,6 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/word_list_view"
-    android:padding="@dimen/category_item_padding_horizontal">
+    android:background="@color/colorYellow">
 
 </ListView>

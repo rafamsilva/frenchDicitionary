@@ -8,16 +8,16 @@ import androidx.appcompat.app.AppCompatActivity
 class NumbersActivity : AppCompatActivity() {
 
     private val words = arrayListOf(
-        Word("Um", "Un"),
-        Word("Dois", "Deux"),
-        Word("Três", "Trois"),
-        Word("Quatro", "Quatre"),
-        Word("Cinco", "Cinq"),
-        Word("Seis", "Six"),
-        Word("Sete", "Sept"),
-        Word("Oito", "Huit"),
-        Word("Nove", "Neuf"),
-        Word("Dez", "Dix")
+        Word("Um", "Un", R.drawable.one),
+        Word("Dois", "Deux", R.drawable.two),
+        Word("Três", "Trois", R.drawable.three),
+        Word("Quatro", "Quatre", R.drawable.four),
+        Word("Cinco", "Cinq", R.drawable.five),
+        Word("Seis", "Six", R.drawable.six),
+        Word("Sete", "Sept", R.drawable.seven),
+        Word("Oito", "Huit", R.drawable.eight),
+        Word("Nove", "Neuf", R.drawable.nine),
+        Word("Dez", "Dix", R.drawable.ten)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,9 +27,9 @@ class NumbersActivity : AppCompatActivity() {
     }
 
     private fun renderView() {
-        val adapter = WordAdapter(this, words)
+        val adapter = WordAdapter(this, words, R.color.colorOrange)
         val listView: ListView = findViewById(R.id.word_list_view)
-        listView.setAdapter(adapter)
+        listView.adapter = adapter
     }
 
 }

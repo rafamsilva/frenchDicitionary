@@ -26,8 +26,8 @@ class PhrasesActivity : AppCompatActivity() {
     }
 
     private fun renderView() {
-        val adapter = WordAdapter(this, words)
+        val adapter = WordAdapter(this, words, R.color.colorBlue)
         val listView: ListView = findViewById(R.id.word_list_view)
-        listView.setAdapter(adapter)
+        listView.adapter = adapter
     }
 }
