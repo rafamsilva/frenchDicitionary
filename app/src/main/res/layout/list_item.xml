@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="88dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:id="@+id/list_item_view">
 
     <ImageView
         android:id="@+id/image_view"
@@ -48,7 +49,8 @@
             android:layout_height="50dp"
             android:src="@drawable/play"
             android:layout_gravity="center_vertical"
-            android:paddingRight="@dimen/category_item_padding_horizontal"/>
+            android:paddingRight="@dimen/category_item_padding_horizontal"
+            android:id="@+id/player_control"/>
 
     </LinearLayout>
 </LinearLayout>
